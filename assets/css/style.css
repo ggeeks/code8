@@ -1,10 +1,3 @@
-/**
-* Template Name: TheEvent - v4.7.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -15,13 +8,14 @@ body {
 }
 
 a {
-  color: #FB6970;
+  color: #FDF8F1;
+  font-size: large;
   text-decoration: none;
   transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-  color: teal;
+  color: #FB6970;
   outline: none;
   text-decoration: none;
 }
@@ -639,31 +633,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
 }
 #schedule .nav-tabs li {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 0;
 }
 #schedule .nav-tabs a {
-  border: none;
+  border: inline-block;
   border: 5px;
   font-weight: 600;
   background-color: transparent;
   color: #FDF8F1;
-  padding: 10px 100px;
 }
 
 @media (max-width: 991px) {
   #schedule .nav-tabs a {
-    padding: 8px 60px;
+    padding:;
   }
 }
 @media (max-width: 767px) {
   #schedule .nav-tabs a {
-    padding: 8px 50px;
+    padding:;
   }
 }
 @media (max-width: 480px) {
   #schedule .nav-tabs a {
-    padding: 8px 30px;
+    padding:;
   }
 }
 #schedule .nav-tabs a.active {
