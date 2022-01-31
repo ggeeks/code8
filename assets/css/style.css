@@ -569,6 +569,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #FDF8F1;
 }
 
+#about ul {
+  text-align: left;
+  display: inline-block;
+}
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
@@ -645,19 +649,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
-  #schedule .nav-tabs a {
+  /* #schedule .nav-tabs a {
     padding:;
-  }
+  } */
 }
 @media (max-width: 767px) {
-  #schedule .nav-tabs a {
+  /* #schedule .nav-tabs a {
     padding:;
-  }
+  } */
 }
 @media (max-width: 480px) {
-  #schedule .nav-tabs a {
-    padding:;
-  }
+  /* #schedule .nav-tabs a {
+    
+  } */
 }
 #schedule .nav-tabs a.active {
   background-color: #FB6970;
@@ -842,7 +846,6 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   transition: 0.6s;
 }
-
 
 /*--------------------------------------------------------------
 # Contact Section
