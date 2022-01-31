@@ -217,18 +217,82 @@
 
 })()
 
+  /**
+   * Form Button
+  */
+window.addEventListener('load', function() {
+  let currForm1 = document.getElementById('UserForm');
+  // Validate on input:
+  currForm1.querySelectorAll('.form-control').forEach((input, index) => {
+    input.addEventListener(('input'), () => {
+      if (input.checkValidity()) {
+        console.log(input.checkValidity());
+        input.classList.remove('is-invalid')
+        input.classList.add('is-valid');      
+      } else {
+        input.classList.remove('is-valid')
+        input.classList.add('is-invalid');
+      }
+      if(input.checkValidity() && index===1) {
+        $("#submitBtn").attr("disabled", false); 
+      }
+    });
+  });
 
+  // Validate on submit:
+  currForm1.addEventListener('submit', function(event) {
+    if (currForm1.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    currForm1.classList.add('was-validated');
+  }, false);
+});
+
+
+  /**
+   * Animation on submit
+   */
 const button = document.querySelector('.button');
 const submit = document.querySelector('.submit');
 
 function toggleClass() {
-	this.classList.toggle('active');
+  this.classList.toggle('active');
 }
 
 function addClass() {
-	this.classList.add('finished');
+  this.classList.add('finished');
 }
 
 button.addEventListener('click', toggleClass);
 button.addEventListener('transitionend', toggleClass);
 button.addEventListener('transitionend', addClass);
+
+  /**
+   * Connection to Google Sheet
+  */
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwCYDpCAm-qEILKcP9UXzHVVK1fhr-HN3N8jCJ4zC9Krb2OmlQ-Sy6LQ2RPMrIGWg9BeA/exec'
+const form = document.forms['UserDetails']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => $.bootstrapGrowl("Thanks for registration", {
+      type: 'success', // (null, 'info', 'error', 'success')
+      offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+      align: 'center', // ('left', 'right', or 'center')
+      width: auto, // (integer, or 'auto')
+      delay: 4000,
+      allow_dismiss: true,
+      stackup_spacing: 10 // spacing between consecutively stacked growls.
+    })) //alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+    .catch(error => $.bootstrapGrowl("error in taking records", {
+      type: 'error', // (null, 'info', 'error', 'success')
+      offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+      align: 'right', // ('left', 'right', or 'center')
+      width: 250, // (integer, or 'auto')
+      delay: 4000,
+      allow_dismiss: true,
+      stackup_spacing: 10 // spacing between consecutively stacked growls.
+    })) //console.error('Error!', error.message))
+})

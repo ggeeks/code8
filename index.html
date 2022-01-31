@@ -20,6 +20,9 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js" integrity="sha512-pBoUgBw+mK85IYWlMTSeBQ0Djx3u23anXFNQfBiIm2D8MbVT9lr+IxUccP8AMMQ6LCvgnlhUCK3ZCThaBCr8Ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="jquery.bootstrap-growl.js"></script>
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +74,7 @@
         SIMPLY LEARN AND CREATE ONE
       </p>
       <a href="assets/video/demo.mp4" class="glightbox play-btn mb-4"></a>
-      <a href="#" class="about-btn scrollto">Register Now</a>
+      <a href="#register" class="about-btn scrollto">Register Now</a>
     </div>
   </section>
 
@@ -374,65 +377,93 @@
             <p>Join us</p>
           </div>
           <div class="card-body">
-            <form role="form" data-toggle="validator">
+            <form role="form" name="UserDetails" action="" id="UserForm" class="needs-validation" data-toggle="validator" novalidate>
+
+              <!-- User Details -->
+              <div>
+                <!-- Name -->
                 <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" data-error="You must have a name." id="inputName" placeholder="Name" required>
+                  <label>Name</label>
+                  <input type="text" id="UserName" name="UserName" class="form-control" pattern="^[A-Za-z -]+$"  placeholder="Name" required autofocus>
+                  <div class="valid-feedback">Valid</div>
+                  <!-- <div class="invalid-feedback">alphabet only</div> -->
+
+                  <!-- Error -->
+                  <div class="help-block with-errors"></div>
+                </div>
+
+                <!-- Phone No. -->
+                <div class="form-group">
+                  <label>Contact No.</label>
+                    <input type="tel" id="UserContact" name="UserContact" class="form-control" data-fv-phone-country11="IN" 
+                      placeholder="Contact No." pattern="^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[6789]\d{9}|(\d[ -]?){10}\d$" required autofocus>
+
+                    <div class="valid-feedback">Valid</div>
+                    <!-- <div class="invalid-feedback">invalid format</div> -->
 
                     <!-- Error -->
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" name="username" maxlength="10" minlength="3"
-                        pattern="^[a-zA-Z0-9_.-]*$" id="inputUsername" placeholder="Username" required>
-
-                    <!-- Error -->
-                    <div class="help-block with-errors"></div>
-                </div>
-
+                <!-- Email -->
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                    <input type="email" id="UserEmail" name="UserEmail" class="form-control" placeholder="Email" required autofocus>
+                    <div class="valid-feedback">Valid</div>
+                    <!-- <div class="invalid-feedback">invalid format</div> -->
 
                     <!-- Error -->
                     <div class="help-block with-errors"></div>
                 </div>
 
-
+                <!-- University Name -->
                 <div class="form-group">
-                    <label>Phone No.</label>
-                    <div class="form-group">
-                        <input type="text" id="UserMobile" maxlength="14" data-fv-numeric="true" 
-                          data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" 
-                          required="required" data-fv-notempty-message="This field cannot be left blank." 
-                          placeholder="Mobile No." class="form-control" name="data[User][mobile]" 
-                          data-fv-field="data[User][mobile]">
+                  <label>University</label>
+                  <input type="text" id="UserUniversity" name="UserUniversity" class="form-control" pattern="^[A-Za-z -]+$"  placeholder="University" required autofocus>
+                  <div class="valid-feedback">Valid</div>
+                  <!-- <div class="invalid-feedback">alphabet only</div> -->
 
-                        <!-- Error -->
-                        <div class="help-block with-errors"></div>
-                    </div>
+                  <!-- Error -->
+                  <div class="help-block with-errors"></div>  
                 </div>
 
-
+                <!-- Interest -->
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea class="form-control" data-error="Please enter message." id="inputMessage"
-                        placeholder="Message" required=""></textarea>
+                    <label>Your Technical Interests?</label>
+                    <textarea class="form-control" id="UserInterest" name="UserInterest" data-error="Please enter message."
+                        placeholder="Share Your Interests Here" required=""></textarea>
+
+                    <div class="valid-feedback">Valid</div>
+                    <!-- <div class="invalid-feedback">must not be empty</div> -->
 
                     <!-- Error -->
                     <div class="help-block with-errors"></div>
                 </div>
 
+                <!-- Expectation -->
                 <div class="form-group">
-                    <!-- <button type="submit" class="btn btn-primary btn-block">Submit</button> -->
-                    <button class="button">
-                      <span class="submit">Submit</span>
-                      <span class="loading"><i class="fa fa-refresh"></i></span>
-                      <span class="check"><i class="fa fa-check"></i></span>
-                    </button>
+                  <label>Suggestions/Expectations?</label>
+                  <textarea class="form-control" id="UserSuggetion" name="UserSuggestion" data-error="Please enter message."
+                      placeholder="Suggestions/Expectations" required=""></textarea>
+                  <div class="valid-feedback">Valid</div>
+                  <!-- <div class="invalid-feedback">must not be empty</div> -->
+
+                  <!-- Error -->
+                  <div class="help-block with-errors"></div>
                 </div>
+
+              </div>
+
+              <!-- submit button -->
+              <center>
+                <div class="form-group">
+                  <button id="submitBtn" type="submit" class="submit button" disabled>
+                    <span class="submit">Submit</span>
+                    <span class="loading"><i class="fa fa-refresh"></i></span>
+                    <span class="check"><i class="fa fa-check"></i></span>
+                  </button>
+                </div>
+              </center>            
             </form>
           </div>
         </div>
@@ -535,7 +566,8 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
