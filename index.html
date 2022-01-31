@@ -16,6 +16,10 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -361,6 +365,80 @@
 
     </section>
 
+    <!-- ======= Registration Section ======= -->
+    <section id="register" class="section-with-bg">
+      <div class="form-container container mt-5">
+        <div class="">
+          <div class="section-header">
+            <h2>Register</h2>
+            <p>Join us</p>
+          </div>
+          <div class="card-body">
+            <form role="form" data-toggle="validator">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" data-error="You must have a name." id="inputName" placeholder="Name" required>
+
+                    <!-- Error -->
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="username" maxlength="10" minlength="3"
+                        pattern="^[a-zA-Z0-9_.-]*$" id="inputUsername" placeholder="Username" required>
+
+                    <!-- Error -->
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+
+                    <!-- Error -->
+                    <div class="help-block with-errors"></div>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Phone No.</label>
+                    <div class="form-group">
+                        <input type="text" id="UserMobile" maxlength="14" data-fv-numeric="true" 
+                          data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" 
+                          required="required" data-fv-notempty-message="This field cannot be left blank." 
+                          placeholder="Mobile No." class="form-control" name="data[User][mobile]" 
+                          data-fv-field="data[User][mobile]">
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control" data-error="Please enter message." id="inputMessage"
+                        placeholder="Message" required=""></textarea>
+
+                    <!-- Error -->
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                <div class="form-group">
+                    <!-- <button type="submit" class="btn btn-primary btn-block">Submit</button> -->
+                    <button class="button">
+                      <span class="submit">Submit</span>
+                      <span class="loading"><i class="fa fa-refresh"></i></span>
+                      <span class="check"><i class="fa fa-check"></i></span>
+                    </button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- =======  F.A.Q Section ======= -->
     <section id="faq">
       <div class="container" data-aos="fade-up">
@@ -438,22 +516,6 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <!-- <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong>Web Game Dev Bootcamp</strong>. All Rights Reserved
