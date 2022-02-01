@@ -1,9 +1,9 @@
   /**
    * Scroll to Top on Refresh
    */
-$(document).ready(function(){
-  $(window).scrollTop(0);
-});
+// $(document).ready(function(){
+//   $(window).scrollTop(0);
+// });
 
 (function() {
   "use strict";
