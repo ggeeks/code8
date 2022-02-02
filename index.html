@@ -17,16 +17,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js" integrity="sha512-pBoUgBw+mK85IYWlMTSeBQ0Djx3u23anXFNQfBiIm2D8MbVT9lr+IxUccP8AMMQ6LCvgnlhUCK3ZCThaBCr8Ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="jquery.bootstrap-growl.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script> -->
   
   <!-- CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.1/swiper-bundle.min.css" integrity="sha512-nYQTis4w7IVqJOyDUGB9fbeChBy1hE66sN/5ezc7knJXvtIClxZS7gID5L6XBdRhYXPfbDGv9QYvA2fane9FCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
@@ -420,7 +417,7 @@
                 <div class="form-group">
                   <label>Your Name</label>
                   <input type="text" id="UserName" name="UserName" class="form-control" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{0,}$"  placeholder="Full Name" required >
-                  <small class="valid-feedback">Valid</small>
+                  <!-- <small class="valid-feedback">Valid</small> -->
                   <!-- <div class="invalid-feedback">alphabet only</div> -->
 
                   <!-- Error -->
@@ -431,7 +428,7 @@
                 <div class="form-group">
                   <label>Contact Number</label>
                     <br><input size="50" type="tel" id="UserContact" name="UserContact" class="form-control" pattern="^[0-9+ ]+$" placeholder="" required >
-                    <div class="valid-feedback">Valid</div>
+                    <!-- <div class="valid-feedback">Valid</div> -->
                     <!-- <div class="invalid-feedback">invalid format</div> -->
 
                     <!-- Error -->
@@ -443,7 +440,7 @@
                     <label>Your Email Address</label>
                     <input type="email" id="UserEmail" name="UserEmail" class="form-control" aria-describedby="emailHelp" placeholder="name@example.com" required >
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    <small class="valid-feedback">Valid</small>
+                    <!-- <small class="valid-feedback">Valid</small> -->
                     <!-- <div class="invalid-feedback">invalid format</div> -->
 
                     <!-- Error -->
@@ -454,7 +451,7 @@
                 <div class="form-group">
                   <label>Your Institute Name</label>
                   <input type="text" id="UserUniversity" name="UserUniversity" class="form-control" pattern="^[A-Za-z -]+$"  placeholder="Your Institute Name" required >
-                  <div class="valid-feedback">Valid</div>
+                  <!-- <div class="valid-feedback">Valid</div> -->
                   <!-- <div class="invalid-feedback">alphabet only</div> -->
 
                   <!-- Error -->
@@ -466,8 +463,7 @@
                     <label>What are your technical interests ?</label>
                     <textarea class="form-control" id="UserInterest" name="UserInterest" data-error="Please enter message."
                         placeholder="What are your technical interests ?" required=""></textarea>
-
-                    <div class="valid-feedback">Valid</div>
+                    <!-- <div class="valid-feedback">Valid</div> -->
                     <!-- <div class="invalid-feedback">must not be empty</div> -->
 
                     <!-- Error -->
@@ -479,7 +475,7 @@
                   <label>Any Suggestions/Expectations ?</label>
                   <textarea class="form-control" id="UserSuggetion" name="UserSuggestion" data-error="Please enter message."
                       placeholder="Any Suggestions/Expectations ?" required=""></textarea>
-                  <div class="valid-feedback">Valid</div>
+                  <!-- <div class="valid-feedback">Valid</div> -->
                   <!-- <div class="invalid-feedback">must not be empty</div> -->
 
                   <!-- Error -->
@@ -571,7 +567,7 @@
   </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" data-aos="fade-up">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -640,10 +636,10 @@
   </a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.1/swiper-bundle.min.js" integrity="sha512-jFy0+88CIqbeLmTqLZ25g/epN9DouaDInLKwvU+ZLCyhDo+kfwMbr+Wk2EBlIvs2zGP4tk6OjCJ713aeci8IIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>

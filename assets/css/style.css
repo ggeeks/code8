@@ -809,9 +809,9 @@ button span:nth-of-type(3) {
   display: none;
 }
 
-.active-button {
-  /* background-color: #2ecc71; */
-}
+/* .active-button {
+  background-color: #2ecc71;
+} */
 
 .active:before {
   width: 100%;
