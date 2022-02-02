@@ -518,6 +518,15 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   margin-bottom: 30px;
 }
+#speakers .speaker img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width:  350px; */
+  height: 350px;
+  background-size:cover;
+}
+
 #speakers .speaker .details {
   background: rgba(25, 30, 48, 0.76);
   position: absolute;
@@ -645,7 +654,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all ease-in-out 0.3s;
 }
 #schedule .schedule-item h4 {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -653,10 +662,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   color: #FDF8F1;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
 }
 #schedule .schedule-item p {
-  font-style: italic;
+  /* font-style: italic; */
   color: #FDF8F1;
   margin-bottom: 0;
 }
