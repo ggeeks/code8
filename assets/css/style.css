@@ -903,14 +903,17 @@ button span:nth-of-type(3) {
 #faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #FB6970;
+  color: #FDF8F1;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   padding-left: 25px;
   cursor: pointer;
-  color: #FDF8F1;
   transition: 0.3s;
+}
+
+#faq .faq-list .question:hover {
+  color: #FB6970;
 }
 
 #faq .faq-list i {
@@ -931,9 +934,9 @@ button span:nth-of-type(3) {
   color: #FDF8F1;
 }
 
-/* #faq .faq-list .collapsed:hover {
+#faq .faq-list .collapsed:hover {
   color: #FB6970;
-} */
+}
 
 #faq .faq-list .collapsed .icon-show {
   display: inline-block;
