@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
 }
 #header.header-scrolled, #header.header-inner {
-  background: rgba(25, 30, 48, 0.98);
+  background: rgba(11,23,42, 0.98);
   height: 70px;
 }
 #header #logo h1 {
@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero:before {
   content: "";
-  background: rgba(16, 12, 34, 0.8);
+  background: rgba(11,23,42, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #speakers .speaker .details {
-  background: rgba(25, 30, 48, 0.76);
+  background: rgba(11,23,42, 0.76);
   position: absolute;
   left: 0;
   bottom: -40px;
