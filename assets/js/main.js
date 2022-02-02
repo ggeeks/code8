@@ -1,10 +1,3 @@
-  /**
-   * Scroll to Top on Refresh
-   */
-// $(document).ready(function(){
-//   $(window).scrollTop(0);
-// });
-
 (function() {
   "use strict";
 
@@ -116,19 +109,9 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    this.classList.toggle('fa-bars')
+    this.classList.toggle('fa-times-circle')
   })
-
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -141,8 +124,8 @@
       if (navbar.classList.contains('navbar-mobile')) {
         navbar.classList.remove('navbar-mobile')
         let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+        navbarToggle.classList.toggle('fa-bars')
+        navbarToggle.classList.toggle('fa-times-circle')
       }
       scrollto(this.hash)
     }
@@ -256,6 +239,18 @@ window.addEventListener('load', function() {
   }, false);
 });
 
+  /**
+   * Initialise Intel Tel Input 
+  */
+const phoneInputField = document.querySelector("#UserContact");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  preferredCountries: ["IN"],
+  // initialCountry: "IN",
+  // geoIpLookup: getIp,
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+ });
+
 
   /**
    * Animation on submit
@@ -284,22 +279,6 @@ const form = document.forms['UserDetails']
 form.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => $.bootstrapGrowl("Thanks for registration", {
-      type: 'success', // (null, 'info', 'error', 'success')
-      offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-      align: 'center', // ('left', 'right', or 'center')
-      width: auto, // (integer, or 'auto')
-      delay: 4000,
-      allow_dismiss: true,
-      stackup_spacing: 10 // spacing between consecutively stacked growls.
-    })) //alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-    .catch(error => $.bootstrapGrowl("error in taking records", {
-      type: 'error', // (null, 'info', 'error', 'success')
-      offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
-      align: 'right', // ('left', 'right', or 'center')
-      width: 250, // (integer, or 'auto')
-      delay: 4000,
-      allow_dismiss: true,
-      stackup_spacing: 10 // spacing between consecutively stacked growls.
-    })) //console.error('Error!', error.message))
+    // .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+    // .catch(error => console.error('Error!', error.message))
 })
