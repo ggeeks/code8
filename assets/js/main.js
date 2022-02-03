@@ -146,7 +146,11 @@
    * Initiate glightbox
    */
   const glightbox = GLightbox({
-    selector: '.glightbox'
+    selector: '.glightbox',
+    closeButton: true,
+    touchNavigation:	true,
+    keyboardNavigation: true,
+    closeOnOutsideClick: true
   });
 
   /**
@@ -213,7 +217,7 @@ $(".stat-count").each(function() {
    * Initiate gallery lightbox 
    */
   const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
+    selector: '.gallery-lightbox',
   });
 
   /**
