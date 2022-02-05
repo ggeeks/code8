@@ -147,33 +147,33 @@
    */
   const glightbox = GLightbox({
     selector: '.glightbox',
-    closeButton: true,
-    touchNavigation:	true,
-    keyboardNavigation: true,
-    closeOnOutsideClick: true
+    // closeButton: true,
+    // touchNavigation:	true,
+    // keyboardNavigation: true,
+    // closeOnOutsideClick: true
   });
 
   /**
-   * Counter
+   * Counter for stats
    */
-(function($) {
-"use strict";
-function count($this){
-var current = parseInt($this.html(), 10);
-current = current + 1; /* Where 50 is increment */	
-$this.html(++current);
-  if(current > $this.data('count')){
-    $this.html($this.data('count'));
-  } else {    
-    setTimeout(function(){count($this)}, 50);
-  }
-}        	
-$(".stat-count").each(function() {
-  $(this).data('count', parseInt($(this).html(), 10));
-  $(this).html('0');
-  count($(this));
-});
-})(jQuery);
+// (function($) {
+// "use strict";
+// function count($this){
+// var current = parseInt($this.html(), 10);
+// current = current + 1; /* Where 50 is increment */	
+// $this.html(++current);
+//   if(current > $this.data('count')){
+//     $this.html($this.data('count'));
+//   } else {    
+//     setTimeout(function(){count($this)}, 100);
+//   }
+// }        	
+// $(".stat-count").each(function() {
+//   $(this).data('count', parseInt($(this).html(), 10));
+//   $(this).html('0');
+//   count($(this));
+// });
+// })(jQuery);
 
 
   /**
