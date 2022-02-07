@@ -785,19 +785,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0;
 }
 #sponsors .sponsors-wrap {
-  border-top: 5px solid #0B172A;
-  border-left: 5px solid #0B172A;
+  /* border-top: 5px solid #0B172A;
+  border-left: 5px solid #0B172A; */
   margin-bottom: 30px;
+  padding: 20px;
 }
 #sponsors .supporter-logo {
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 5px solid #0B172A;
-  border-bottom: 5px solid #0B172A;
+  /* border-right: 5px solid #0B172A;
+  border-bottom: 5px solid #0B172A; */
   overflow: hidden;
   background: #FDF8F1;
+  margin: 10px;
   height: 160px;
 }
 #sponsors .supporter-logo:hover img {
