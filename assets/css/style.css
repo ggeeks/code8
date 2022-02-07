@@ -11,6 +11,19 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #FDF8F1;
+  border-radius: 5px;
+}
+
 a {
   color: #FDF8F1;
   font-size: large;
