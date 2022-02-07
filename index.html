@@ -30,9 +30,6 @@
     <meta name="theme-color" content="#ffffff">
   </div>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-  
   <!-- CSS Files -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -60,18 +57,19 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
           <!-- <li><a class="nav-link scrollto" href="#venue">Venue</a></li> -->
           <li><a class="nav-link scrollto" href="#sponsors">Sponsors</a></li>
         </ul>
-        <i class="fas fa-bars mobile-nav-toggle"></i>
+        <div class=".navbar-mobile">
+          <i class="fas fa-bars mobile-nav-toggle"></i>
+        </div>
       </nav><!-- .navbar -->
       <a class="register scrollto" href="#register">Register For Free</a>
     </div>
   </header>
-
+ 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
@@ -81,13 +79,50 @@
         Don't Limit yourself in playing <br>
         SIMPLY LEARN AND CREATE ONE
       </p>
-      <a href="assets/video/code8.mp4" class="glightbox play-btn mb-4"></a>
+      <a class="play-btn glightbox" href="assets/video/code8.mp4"></a>
       <a href="#register" class="register-btn scrollto">Register For Free</a>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+
+  <!-- ======= Timer Section ======= -->
+  <section id="count">
+   <div class="container time-container">
+      <div class="row justify-content-center">
+         <div class="col-10">
+            <div class="card text-center">
+               <div class="card-body time-countdown countdown">
+                  <ul id="countdown-example" class="list-group list-group-horizontal justify-content-center">
+                     <li>
+                        <span class="count days">29</span>
+                        <p class="text days_text">Days</p>
+                     </li>
+                     <li><p class="colon">:</p></li>
+                     <li>
+                        <span class="count hours">53</span>
+                        <p class="text hours_text">Hours</p>
+                     </li>
+                     <li><p class="colon">:</p></li>
+                     <li>
+                        <span class="count minutes">34</span>
+                        <p class="text minutes_text">Minutes</p>
+                     </li>
+                     <li><p class="colon">:</p></li>
+                     <li>
+                        <span class="count seconds">08</span>
+                        <p class="text seconds_text">Seconds</p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
     </div>
   </section>
 
   <main id="main">
-    <!-- ======= About Section ======= -->
     <section id="about">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -96,32 +131,25 @@
         </div>
         <div class="about-details" data-aos="fade-up" data-aos-delay="300">
           <div class="row">
-            <div class="col-12 col-lg-7">
-              <p class="justify-items-center">
+            <div class="col-md-6 col-lg-6 col-xs-12">
+              <p class="intro-desc">
                 <b>Web Game Dev Bootcamp</b> is a week long Boot Camp organised by 
                 Code8 and Gaming Geeks from 14th - 21st February (6:45 PM - 8:00 PM). 
                 Along with the game development get an opportunity to be a part of some 
                 interesting projects.
               </p>
               <br>
-              <p class="justify-items-center"><b>What's Included</b></p>
-              <div class="row list">
-                <div class="col-md-9">
-                  <i class="fas fa-check"></i>&nbsp;&nbsp;
-                  Async online mock interviews with unlimited practice<br>
-                </div>
-                <div class="col-md-4">
-                  <i class="fas fa-check"></i>&nbsp;&nbsp;Goodies<br>
-                  <i class="fas fa-check"></i>&nbsp;&nbsp;Coupon<br>
-                </div>
-                <div class="col-md-4">
-                  <i class="fas fa-check"></i>&nbsp;&nbsp;T Shirt<br>
-                  <i class="fas fa-check"></i>&nbsp;&nbsp;Certificate<br>
-                </div>
-              </div>
+              <h2 class="intro-title">What's Included</h2>
+              <ul class="list-specification">
+                <li><i class="fas fa-check-circle"></i>&nbsp;&nbsp;Async online mock interviews with unlimited practice</li>
+                <li><i class="fas fa-check-circle"></i>&nbsp;&nbsp;Goodies<br></li>
+                <li><i class="fas fa-check-circle"></i>&nbsp;&nbsp;Coupon<br></li>
+                <li><i class="fas fa-check-circle"></i>&nbsp;&nbsp;T Shirt<br></li>
+                <li><i class="fas fa-check-circle"></i>&nbsp;&nbsp;Certificate<br></li>
+              </ul>
             </div>
-            <div class="col-12 col-lg-5">
-                <img src="assets/svg/about.svg" width="100%" height="auto" alt="bootcamp">
+            <div class="col-md-6 col-lg-6 col-xs-12">
+              <img src="assets/svg/about.svg" width="100%" height="auto" alt="bootcamp">
             </div>
           </div>
         </div>
@@ -129,62 +157,40 @@
         <br>
         <div class="container" data-aos="fade-up" data-aos-delay="300">
           <div class="row">
-            <div class="col-6 col-lg-3">
-              <div class="count-data text-center">
-                  <!-- <i class="fa fa-user fa-3x"></i> -->
-                  <h6 class="count h2 stat-count">478+</h6>
-                  <div class="m-0px font-w-600">Participation</div>
-              </div>
+          <div class="col-md-3">
+            <div class="card-counter primary">
+              <i class="fa fa-users"></i>
+              <span class="count-numbers"><span data-toggle="counterUp">1500</span>+</span>
+              <span class="count-name">Participants</span>
             </div>
-            <div class="col-6 col-lg-3">
-              <div class="count-data text-center">
-                  <!-- <i class="fa fa-user fa-3x"></i> -->
-                  <h6 class="count h2 stat-count">9+</h6>
-                  <div class="m-0px font-w-600">Colleges</div>
-              </div>
+          </div>
+      
+          <div class="col-md-3">
+            <div class="card-counter danger">
+              <i class="fa fa-university"></i>
+              <span class="count-numbers"><span data-toggle="counterUp">18</span>+</span>
+              <span class="count-name">Colleges</span>
             </div>
-            <div class="col-6 col-lg-3">
-              <div class="count-data text-center">
-                  <!-- <i class="fa fa-user fa-3x"></i> -->
-                  <h6 class="count h2 stat-count">24+</h6>
-                  <div class="m-0px font-w-600">Past Events</div>
-              </div>
+          </div>
+      
+          <div class="col-md-3">
+            <div class="card-counter success">
+              <i class="fa fa-calendar-week"></i>
+              <span class="count-numbers"><span data-toggle="counterUp">21</span>+</span>
+              <span class="count-name">Events</span>
             </div>
-            <div class="col-6 col-lg-3">
-              <div class="count-data text-center">
-                  <!-- <i class="fa fa-user fa-3x"></i> -->
-                  <h6 class="count h2 stat-count">35+</h6>
-                  <div class="m-0px font-w-600">Projects Completed</div>
-              </div>
+          </div>
+      
+          <div class="col-md-3">
+            <div class="card-counter info">
+              <i class="fa fa-code-branch"></i>
+              <span class="count-numbers"><span data-toggle="counterUp">37</span>+</span>
+              <span class="count-name">Projects Completed</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check out the gallery from past events and bootcamps
-        </div>
       </div>
-
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/gallery/1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/2.jpg" class="gallery-lightbox"><img src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/4.jpg" class="gallery-lightbox"><img src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/5.jpg" class="gallery-lightbox"><img src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/7.jpg" class="gallery-lightbox"><img src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/8.jpg" class="gallery-lightbox"><img src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
     </section>
 
     <!-- ======= Speakers Section ======= -->
@@ -378,20 +384,6 @@
             </div>
           </div>
           <!-- End Schdule Day 7 -->
-
-          <!-- Schdule Day 8 -->
-          <div role="tabpanel" class="col-lg-7 tab-pane fade" id="day-8">
-            <div class="row schedule-item">
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/1.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Result<span></span></h4>
-                <p>21st Feb, 6:45 PM - 8:00 PM</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Schdule Day 8 -->
         </div>
       </div>
 
@@ -627,7 +619,7 @@
               <li><a href="https://www.instagram.com/codeate.in/" target="_blank"><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
               <li><a href="https://discord.gg/mHFFtXPJBA" target="_blank"><i class="fab fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
               <li><a href="https://chat.whatsapp.com/Dy5uAVlpzFj3ent90TMjeW" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp</a></li>
-              <li><a href="contact.code8@gmail.com" target="_blank"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Email Address</a></li>
+              <li><a href="mailto: contact.code8@gmail.com" target="_blank"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Email Address</a></li>
             </ul>
           </div>
 
@@ -639,7 +631,7 @@
               <li><a href="https://www.instagram.com/gamers.platform_/" target="_blank"><i class="fab fa-instagram"></i>&nbsp;&nbsp;Instagram</a></li>
               <li><a href="https://discord.gg/WEJpa7MtvT" target="_blank"><i class="fab fa-discord"></i>&nbsp;&nbsp;Discord</a></li>
               <li><a href="https://chat.whatsapp.com/CB1DwNyUm7C35wFi0IC5JE" target="_blank"><i class="fab fa-whatsapp"></i>&nbsp;&nbsp;WhatsApp</a></li>
-              <li><a href="ggeeks.platform@gmail.com" target="_blank"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Email Address</a></li>
+              <li><a href="mailto: ggeeks.platform@gmail.com" target="_blank"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Email Address</a></li>
             </ul>
           </div>
         </div>
@@ -665,7 +657,9 @@
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.1/swiper-bundle.min.js" integrity="sha512-jFy0+88CIqbeLmTqLZ25g/epN9DouaDInLKwvU+ZLCyhDo+kfwMbr+Wk2EBlIvs2zGP4tk6OjCJ713aeci8IIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
