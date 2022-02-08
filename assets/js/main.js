@@ -145,80 +145,43 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox',
-    // closeButton: true,
-    // touchNavigation:	true,
-    // keyboardNavigation: true,
-    // closeOnOutsideClick: true
+  const videoTwo = GLightbox({
+    selector: ".glightbox",
+    type: "video",
+    source: "youtube", //vimeo, youtube or local
+    width: 900,
+    autoplayVideos: true,
   });
 
   /**
-   * Counter for stats
+   * Timer
    */
-// (function($) {
-// "use strict";
-// function count($this){
-// var current = parseInt($this.html(), 10);
-// current = current + 1; /* Where 50 is increment */	
-// $this.html(++current);
-//   if(current > $this.data('count')){
-//     $this.html($this.data('count'));
-//   } else {    
-//     setTimeout(function(){count($this)}, 100);
-//   }
-// }        	
-// $(".stat-count").each(function() {
-//   $(this).data('count', parseInt($(this).html(), 10));
-//   $(this).html('0');
-//   count($(this));
-// });
-// })(jQuery);
-
-
-  /**
-   * Gallery Slider
-   */
-  new Swiper('.gallery-slider', {
-    speed: 400,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      575: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
-   * Initiate gallery lightbox 
-   */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox',
-  });
+   const end = new Date("Feb 14, 2022 16:19:00").getTime();
+   //const end = new Date("November 09, 2020 00:00:00").getTime();
+   const dayEl = document.querySelector(".days");
+   const hoursEl = document.querySelector(".hours");
+   const minutesEl = document.querySelector(".minutes");
+   const secondsEl = document.querySelector(".seconds");
+   const seconds = 1000;
+   const minutes = seconds * 60;
+   const hours = minutes * 60;
+   const days = hours * 24;
+   
+   const x = setInterval(function () {
+     let now = new Date().getTime();
+     const difference = end - now;
+   
+     if (difference < 0) {
+       clearInterval(x);
+       document.getElementById("done").innerHTML = "";
+       return;
+     }
+   
+     dayEl.innerText = Math.floor(difference / days);
+     hoursEl.innerText = Math.floor((difference % days) / hours);
+     minutesEl.innerText = Math.floor((difference % hours) / minutes);
+     secondsEl.innerText = Math.floor((difference % minutes) / seconds);
+   }, seconds);
 
   /**
    * Animation on scroll
@@ -232,7 +195,15 @@
     })
   });
 
-})()
+})();
+
+  /**
+   * Counter for Stats
+  */
+$('[data-toggle="counterUp"]').counterUp({
+  delay: 15,
+  time: 1500
+});
 
   /**
    * Form Button
