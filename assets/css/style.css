@@ -575,7 +575,7 @@ ul {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .countdown ul li {
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
 }
 @media (max-width: 767px) {
@@ -585,39 +585,44 @@ ul {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .countdown ul li {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .countdown ul li {
+    padding: 0 5px;
+  }
+}
+
 .countdown ul li .count {
-  font-size: 52px;
+  font-size: 35px;
   font-weight: 600;
   line-height: 60px;
-  color: var(--white);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .countdown ul li .count {
-    font-size: 55px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 767px) {
   .countdown ul li .count {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 30px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .countdown ul li .count {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 40px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .countdown ul li .count {
-    font-size: 22px;
-    /* line-height: 1px; */
+    font-size: 20px;
   }
 }
 
@@ -625,64 +630,62 @@ ul {
   font-size: 20px;
   font-weight: 600;
   margin-top: 10px;
-  color: var(--white);
+  margin-bottom: 0;
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .countdown ul li .text {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media (max-width: 767px) {
   .countdown ul li .text {
-    font-size: 14px;
-    margin-top: 0;
+    font-size: 12px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .countdown ul li .text {
-    font-size: 18px;
-    margin-top: 0;
+    font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .countdown ul li .text {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
 .countdown ul li .colon {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
-  margin-top: 10px;
-  color: var(--white);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .countdown ul li .colon {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 767px) {
+  .countdown ul li .colon {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 576px) and (max-width: 767px) {
+  .countdown ul li .colon {
     font-size: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .countdown ul li .colon {
-    font-size: 14px;
-    margin-top: 0;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .countdown ul li .colon {
-    font-size: 18px;
-    margin-top: 0;
+    font-weight: 600;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .countdown ul li .colon {
     font-size: 18px;
-    margin-top: 0;
+    font-weight: 600;
   }
 }
 
