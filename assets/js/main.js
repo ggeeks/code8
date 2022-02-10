@@ -156,7 +156,7 @@
   /**
    * Timer
    */
-   const end = new Date("Feb 14, 2022 16:19:00").getTime();
+   const end = new Date("Feb 24, 2022 20:19:00").getTime();
    //const end = new Date("November 09, 2020 00:00:00").getTime();
    const dayEl = document.querySelector(".days");
    const hoursEl = document.querySelector(".hours");
@@ -271,12 +271,12 @@ button.addEventListener('transitionend', addClass);
   /**
    * Connection to Google Sheet
   */
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwCYDpCAm-qEILKcP9UXzHVVK1fhr-HN3N8jCJ4zC9Krb2OmlQ-Sy6LQ2RPMrIGWg9BeA/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbziDeZWTny5xkZobaCAhTKc7bxLtpoWOChcs9fi6rFROUPRStMpzfDoC8X1F5jmy4Qu/exec'
 const form = document.forms['UserDetails']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    // .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-    // .catch(error => console.error('Error!', error.message))
+    .then(response => alert("Registration Successfull"))
+    .catch(error => console.error('Error!', error.message))
 })
