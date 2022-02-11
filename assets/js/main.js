@@ -1,3 +1,10 @@
+  /**
+   * Scroll to Top on Refresh
+   */
+$(window).on('beforeunload', function(){
+    $(window).scrollTop(0);
+  });
+
 (function() {
   "use strict";
 
