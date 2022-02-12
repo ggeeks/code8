@@ -9,9 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
   <!-- Favicons -->
-  <!-- <div>
+  <div>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
@@ -29,7 +28,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-  </div> -->
+  </div>
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,6 +37,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.1/swiper-bundle.min.css" integrity="sha512-nYQTis4w7IVqJOyDUGB9fbeChBy1hE66sN/5ezc7knJXvtIClxZS7gID5L6XBdRhYXPfbDGv9QYvA2fane9FCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -79,8 +79,7 @@
         Don't Limit yourself in playing <br>
         SIMPLY LEARN AND CREATE ONE
       </p>
-      <!-- <a class="play-btn glightbox" href="assets/video/code8.mp4"></a> -->
-      <a class="play-btn glightbox" href="https://youtu.be/3V0uHP7K39I"></a>
+      <a class="play-btn glightbox" href="assets/video/code8.mp4"></a>
       <a href="#register" class="register-btn scrollto">Register For Free</a>
       <br>
       <br>
@@ -97,22 +96,22 @@
                <div class="card-body time-countdown countdown">
                   <ul id="countdown-example" class="list-group list-group-horizontal justify-content-center">
                      <li>
-                        <span class="count days">00</span>
+                        <span class="count days">29</span>
                         <p class="text days_text">Days</p>
                      </li>
                      <li><p class="colon">:</p></li>
                      <li>
-                        <span class="count hours">00</span>
+                        <span class="count hours">53</span>
                         <p class="text hours_text">Hours</p>
                      </li>
                      <li><p class="colon">:</p></li>
                      <li>
-                        <span class="count minutes">00</span>
+                        <span class="count minutes">34</span>
                         <p class="text minutes_text">Minutes</p>
                      </li>
                      <li><p class="colon">:</p></li>
                      <li>
-                        <span class="count seconds">00</span>
+                        <span class="count seconds">08</span>
                         <p class="text seconds_text">Seconds</p>
                      </li>
                   </ul>
@@ -441,95 +440,63 @@
             <h2>Register</h2>
             <p>Register here for the bootcamp</p>
           </div>
-          <div class="card-body">
-            <form role="form" name="UserDetails" action="" id="UserForm" class="needs-validation" data-toggle="validator" novalidate>
 
-              <!-- User Details -->
-              <div>
-                <!-- Name -->
-                <div class="form-group">
-                  <label>Your Name*</label>
-                  <input type="text" id="UserName" name="Name" class="form-control" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{0,}$"  placeholder="Full Name" required >
-                  <!-- <small class="valid-feedback">Valid</small> -->
-                  <!-- <div class="invalid-feedback">alphabet only</div> -->
-
-                  <!-- Error -->
-                  <samll class="help-block with-errors"></small>
+          <!-- Form -->
+          <div class="container my-4">
+            <form role="form" name="UserDetails" id="UserForm" autocomplete="off">
+                <div class="mb-4">
+                    <label for="Your Name" class="form-label">Your Name</label>
+                    <input type="text" name="UserName" class="form-control" id="username" placeholder="Enter your name...">
+                    <small id="usernamevalid" class="form-text text-danger invalid-feedback">must start with a letter</small>
                 </div>
 
-                <!-- Contact No. -->
-                <div class="form-group">
-                  <label>Contact Number*</label>
-                    <br><input size="50" type="tel" id="UserContact" name="Phone-Number" class="form-control" pattern="^[0-9+ ]+$" placeholder="" required >
-                    <!-- <div class="valid-feedback">Valid</div> -->
-                    <!-- <div class="invalid-feedback">invalid format</div> -->
-
-                    <!-- Error -->
-                    <div class="help-block with-errors"></div>
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="text" name="UserEmail" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off" placeholder="name@domain.com">
+                    <div id="emailHelp" class="form-text"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" id="lockSvg" fill="currentColor" class="bi bi-lock-fill me-1 mb-1" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                      </svg>We'll <span>never</span> share your email with anyone else.</div>
+                    <small id="emailvalid" class="form-text text-danger invalid-feedback">Email must be valid!</small>
                 </div>
 
-                <!-- Email -->
-                <div class="form-group">
-                    <label>Your Email Address*</label>
-                    <input type="email" id="UserEmail" name="Email" class="form-control" aria-describedby="emailHelp" placeholder="name@example.com" required >
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    <!-- <small class="valid-feedback">Valid</small> -->
-                    <!-- <div class="invalid-feedback">invalid format</div> -->
-
-                    <!-- Error -->
-                    <small class="help-block with-errors"></small>
+                <div class="mb-4 phone">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" name="UserContact" class="form-control" id="phone" autocomplete="off" placeholder="+91">
+                    <small id="phonevalid" class="form-text text-danger invalid-feedback">Phone must be 10 digits long.</small>
                 </div>
 
-                <!-- University Name -->
-                <div class="form-group">
-                  <label>Your Institute Name*</label>
-                  <input type="text" id="UserUniversity" name="Institute" class="form-control" pattern="^[A-Za-z -]+$"  placeholder="Your Institute Name" required >
-                  <!-- <div class="valid-feedback">Valid</div> -->
-                  <!-- <div class="invalid-feedback">alphabet only</div> -->
-
-                  <!-- Error -->
-                  <div class="help-block with-errors"></div>  
+                <div class="mb-4">
+                  <label for="Your Institute" class="form-label">Your Institute Name</label>
+                  <input type="text" id="university" name="UserUniversity" class="form-control" id="useraddress" placeholder="Enter your institute name...">
+                  <small id="usernamevalid" class="form-text text-danger invalid-feedback">must start with a letter</small>
                 </div>
 
-                <!-- Interest -->
-                <div class="form-group">
-                    <label>What are your technical interests ?</label>
-                    <textarea class="form-control" id="UserInterest" name="Techinal-Qualities" data-error="Please enter message."
-                        placeholder="What are your Technical Interests ?"></textarea>
-                    <!-- <div class="valid-feedback">Valid</div> -->
-                    <!-- <div class="invalid-feedback">must not be empty</div> -->
-
-                    <!-- Error -->
-                    <!-- <div class="help-block with-errors"></div> -->
+                <div class="mb-4">
+                    <label for="address" class="form-label">What are your technical interests ?</label>
+                    <textarea name="UserInterest" id="interest" class="form-control" autocomplete="off" placeholder="Enter your technical interests..."></textarea>
                 </div>
 
-                <!-- Expectation -->
-                <div class="form-group">
-                  <label>Any Suggestions/Expectations ?</label>
-                  <textarea class="form-control" id="UserSuggetion" name="Suggestion/Expectation" data-error="Please enter message."
-                      placeholder="Any Suggestions/Expectations ?"></textarea>
-                  <!-- <div class="valid-feedback">Valid</div> -->
-                  <!-- <div class="invalid-feedback">must not be empty</div> -->
-
-                  <!-- Error -->
-                  <!-- <div class="help-block with-errors"></div> -->
+                <div class="mb-4">
+                  <label for="address" class="form-label">Any Suggestions/Expectations ?</label>
+                  <textarea name="UserSuggestion" id="suggestion" class="form-control" autocomplete="off" placeholder="any suggestions/expectations..."></textarea>
                 </div>
 
-              </div>
-
-              <!-- submit button -->
-              <center>
-                <div class="form-group">
-                  <button id="submitBtn" type="submit" class="submit button" disabled>
-                    <span class="submit">Submit</span>
-                    <span class="loading"><i class="fa fa-refresh"></i></span>
-                    <span class="check"><i class="fa fa-check"></i></span>
-                  </button>
+                <center>
+                  <button id="submit" type="submit" class="myBtn btn">Submit</button>
+                </center>
+                <br>
+                <div id="successAlert" class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                  <strong>Congrats!</strong> Your request has been successfully submitted ;)
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-              </center>            
+      
+                <div id="failAlert" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                    <strong>Whoops!</strong> Something is wrong :/
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+      
             </form>
           </div>
-      </div>
     </section>
 
     <!-- =======  F.A.Q Section ======= -->
@@ -660,6 +627,7 @@
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
