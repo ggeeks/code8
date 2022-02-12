@@ -274,7 +274,7 @@ phone.addEventListener("blur", () => {
 });
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwCYDpCAm-qEILKcP9UXzHVVK1fhr-HN3N8jCJ4zC9Krb2OmlQ-Sy6LQ2RPMrIGWg9BeA/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbziDeZWTny5xkZobaCAhTKc7bxLtpoWOChcs9fi6rFROUPRStMpzfDoC8X1F5jmy4Qu/exec'
 const form = document.forms['UserDetails']
 
 let submit = document.getElementById("submit");
