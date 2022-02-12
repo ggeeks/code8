@@ -163,7 +163,7 @@
   /**
    * Timer
    */
-   const end = new Date("Feb 14, 2022 16:19:00").getTime();
+   const end = new Date("Feb 24, 2022 20:59:00").getTime();
    //const end = new Date("November 09, 2020 00:00:00").getTime();
    const dayEl = document.querySelector(".days");
    const hoursEl = document.querySelector(".hours");
