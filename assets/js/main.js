@@ -215,75 +215,87 @@ $('[data-toggle="counterUp"]').counterUp({
   /**
    * Form Button
   */
-window.addEventListener('load', function() {
-  let currForm1 = document.getElementById('UserForm');
-  // Validate on input:
-  currForm1.querySelectorAll('.form-control').forEach((input, index) => {
-    input.addEventListener(('input'), () => {
-      if (input.checkValidity()) {
-        console.log(input.checkValidity());
-        input.classList.remove('is-invalid')
-        input.classList.add('is-valid');      
-      } else {
-        input.classList.remove('is-valid')
-        input.classList.add('is-invalid');
-      }
-      if(input.checkValidity() && index===1) {
-        $("#submitBtn").attr("disabled", false); 
-      }
-    });
-  });
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const university = document.getElementById("university");
+let validUsername = false;
+let validEmail = false;
+let validPhone = false;
+let validUniversity = true;
+// let validInterest = true;
+// let validSuggestion = true;
 
-  // Validate on submit:
-  currForm1.addEventListener('submit', function(event) {
-    if (currForm1.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+const successAlert = document.getElementById("successAlert");
+const failAlert = document.getElementById("failAlert");
+
+successAlert.style.display = "none";
+failAlert.style.display = "none";
+
+username.addEventListener("blur", () => {
+    let regex = /^[a-zA-Z]([0-9a-zA-Z]){1,10}$/;
+    let str = username.value;
+    if (regex.test(str)) {
+        username.classList.remove("is-invalid");
+        validUsername = true;
+    } else {
+        username.classList.add("is-invalid");
+        validUsername = false;
     }
-    currForm1.classList.add('was-validated');
-  }, false);
 });
 
-  /**
-   * Initialise Intel Tel Input 
-  */
-const phoneInputField = document.querySelector("#UserContact");
-const phoneInput = window.intlTelInput(phoneInputField, {
-  preferredCountries: ["IN"],
-  // initialCountry: "IN",
-  // geoIpLookup: getIp,
-  utilsScript:
-    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
- });
+email.addEventListener("blur", () => {
+    let emailHelp = document.getElementById("emailHelp");
+    let regex = /^([_\-\.a-zA-Z0-9]+)@([_\-\.a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$/;
+    let str = email.value;
+    if (regex.test(str)) {
+        emailHelp.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" id="lockSvg" fill="currentColor" class="bi bi-lock-fill me-1 mb-1" viewBox="0 0 16 16">
+        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+      </svg>We'll <span>never</span> share your email with anyone else.</div>`;
+        email.classList.remove("is-invalid");
+        validEmail = true;
+    } else {
+        emailHelp.innerHTML = ``;
+        email.classList.add("is-invalid");
+        validEmail = false;
+    }
+});
+
+phone.addEventListener("blur", () => {
+    let regex = /^([0-9]){10}$/;
+    let str = phone.value;
+    if (regex.test(str)) {
+        phone.classList.remove("is-invalid");
+        validPhone = true;
+    } else {
+        phone.classList.add("is-invalid");
+        validPhone = false;
+    }
+});
 
 
-  /**
-   * Animation on submit
-   */
-const button = document.querySelector('.button');
-const submit = document.querySelector('.submit');
-
-function toggleClass() {
-  this.classList.toggle('active');
-}
-
-function addClass() {
-  this.classList.add('finished');
-}
-
-button.addEventListener('click', toggleClass);
-button.addEventListener('transitionend', toggleClass);
-button.addEventListener('transitionend', addClass);
-
-  /**
-   * Connection to Google Sheet
-  */
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwCYDpCAm-qEILKcP9UXzHVVK1fhr-HN3N8jCJ4zC9Krb2OmlQ-Sy6LQ2RPMrIGWg9BeA/exec'
 const form = document.forms['UserDetails']
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    // .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-    // .catch(error => console.error('Error!', error.message))
-})
+let submit = document.getElementById("submit");
+submit.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (validEmail && validUsername && validPhone && validUniversity) {
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        successAlert.style.display = "block";
+    } else {
+        failAlert.style.display = "block";
+    }
+});
+
+/**
+   * Connection to Google Sheet
+  */
+ 
+//  form.addEventListener('submit', e => {
+//    e.preventDefault()
+//    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+//      .then(response => {})
+//      .catch(error => {})
+//  })
