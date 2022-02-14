@@ -219,7 +219,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const university = document.getElementById("university");
-let validUsername = false;
+let validUsername = true; 
 let validEmail = false;
 let validPhone = false;
 let validUniversity = true;
@@ -232,21 +232,23 @@ const failAlert = document.getElementById("failAlert");
 successAlert.style.display = "none";
 failAlert.style.display = "none";
 
-username.addEventListener("blur", () => {
-    let regex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-    let str = username.value;
-    if (regex.test(str)) {
-        username.classList.remove("is-invalid");
-        validUsername = true;
-    } else {
-        username.classList.add("is-invalid");
-        validUsername = false;
-    }
-});
+// username.addEventListener("blur", () => {
+//     // let regex = /^([a-zA-Z0-9]+\s?)*$/;
+//     // let regex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+//     let str = username.value;
+//     if (regex.test(str)) {
+//         username.classList.remove("is-invalid");
+//         validUsername = true;
+//     } else {
+//         username.classList.add("is-invalid");
+//         validUsername = false;
+//     }
+// });
 
 email.addEventListener("blur", () => {
     let emailHelp = document.getElementById("emailHelp");
-    let regex = /^([_\-\.a-zA-Z0-9]+)@([_\-\.a-zA-Z0-9]+)\.([a-zA-Z]){2,7}$/;
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    // let regex = /^\s*(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+))|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))\s$/;
     let str = email.value;
     if (regex.test(str)) {
         emailHelp.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" id="lockSvg" fill="currentColor" class="bi bi-lock-fill me-1 mb-1" viewBox="0 0 16 16">
@@ -284,14 +286,21 @@ submit.addEventListener("click", (e) => {
     if (validEmail && validUsername && validPhone && validUniversity) {
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         successAlert.style.display = "block";
+        setTimeout(function () {  
+          $('#successAlert').alert('close');
+        }, 5000);
     } else {
         failAlert.style.display = "block";
+        setTimeout(function () {  
+          $('#failAlert').alert('close');
+        }, 5000);
     }
 });
 
-/**
-   * Connection to Google Sheet
-  */
+
+
+  // / * Connection to Google Sheet
+  // */
  
 //  form.addEventListener('submit', e => {
 //    e.preventDefault()

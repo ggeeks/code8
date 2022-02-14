@@ -444,16 +444,25 @@
 
           <!-- Form -->
           <div class="container my-4">
-            <form role="form" name="UserDetails" id="UserForm" autocomplete="off">
+            <form role="form" name="UserDetails" autocomplete="off">
+                <div id="successAlert" class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                  <strong>Congrats!</strong> Your request has been successfully submitted ;)
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+      
+                <div id="failAlert" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                    <strong>Whoops!</strong> Something is wrong :/
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <div class="mb-4">
                     <label for="Your Name" class="form-label">Your Name</label>
-                    <input type="text" name="Name" class="form-control" id="username" placeholder="Enter your name...">
+                    <input type="text" name="Name" class="form-control" id="username" placeholder="Enter your name..." required>
                     <small id="usernamevalid" class="form-text text-danger invalid-feedback">must start with a letter</small>
                 </div>
 
                 <div class="mb-4">
                     <label for="email" class="form-label">Email address</label>
-                    <input type="text" name="Email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off" placeholder="name@domain.com">
+                    <input type="email" name="Email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off" placeholder="name@domain.com" required>
                     <div id="emailHelp" class="form-text"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" id="lockSvg" fill="currentColor" class="bi bi-lock-fill me-1 mb-1" viewBox="0 0 16 16">
                         <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
                       </svg>We'll <span>never</span> share your email with anyone else.</div>
@@ -462,13 +471,13 @@
 
                 <div class="mb-4 phone">
                     <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" name="Phone-Number" class="form-control" id="phone" autocomplete="off" placeholder="+91">
+                    <input type="tel" name="Phone-Number" class="form-control" id="phone" autocomplete="off" placeholder="+91" required>
                     <small id="phonevalid" class="form-text text-danger invalid-feedback">Phone must be 10 digits long.</small>
                 </div>
 
                 <div class="mb-4">
                   <label for="Your Institute" class="form-label">Your Institute Name</label>
-                  <input type="text" id="university" name="Institute" class="form-control" id="useraddress" placeholder="Enter your institute name...">
+                  <input type="text" id="university" name="Institute" class="form-control" id="useraddress" placeholder="Enter your institute name..." required>
                   <small id="usernamevalid" class="form-text text-danger invalid-feedback">must start with a letter</small>
                 </div>
 
@@ -486,15 +495,7 @@
                   <button id="submit" type="submit" class="myBtn btn">Submit</button>
                 </center>
                 <br>
-                <div id="successAlert" class="alert alert-success alert-dismissible fade show text-center" role="alert">
-                  <strong>Congrats!</strong> Your request has been successfully submitted ;)
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-      
-                <div id="failAlert" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-                    <strong>Whoops!</strong> Something is wrong :/
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+                
       
             </form>
           </div>
