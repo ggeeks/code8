@@ -5,6 +5,10 @@
     $(window).scrollTop(0);
   });
 
+function newTab(){
+  window.open("https://chat.whatsapp.com/BlninnAcfnOLucmEpDoWsn", "_blank");
+}
+
 (function() {
   "use strict";
 

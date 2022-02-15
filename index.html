@@ -447,15 +447,6 @@
           <!-- Form -->
           <div class="container my-2">
             <form role="form" name="UserDetails" autocomplete="off">
-                <div id="successAlert" class="alert alert-success alert-dismissible fade show text-center" role="alert">
-                  <strong>Congrats!</strong> Registration Successful ❤️
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-      
-                <div id="failAlert" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-                    <strong>Whoops!</strong> Something is missing 😭
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
                 <div class="mb-4">
                     <label for="Your Name" class="form-label">Your Name</label>
                     <input type="text" name="Name" class="form-control" id="username" placeholder="Enter your name..." required>
@@ -492,13 +483,23 @@
                   <label for="address" class="form-label">Any Suggestions/Expectations ?</label>
                   <textarea name="Suggestion/Expectation" id="suggestion" class="form-control" autocomplete="off" placeholder="Any suggestions/expectations..."></textarea>
                 </div>
-
+                
+                <p class="small">Everyone is requested to join the WhatsApp Group for further Deliverables!!!</p>
+                <div id="successAlert" class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                  <strong>Congrats!</strong> Registration Successful 👍
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+      
+                <div id="failAlert" class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                    <strong>Whoops!</strong> Something is missing 😭
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <center style="display:flex; justify-content:space-evenly">
                   <!-- <button id="submit" type="submit" class="myBtn btn">Submit</button> -->
                   <button id="submit" type="submit" class="myBtn btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
                     Submit
                   </button>
-                  <!-- <button id="whatsapp" type="submit" class="myBtn btn">Join Group <i class="fa fa-whatsapp"></i></button> -->
+                  <button id="whatsapp" type="button" class="myBtn btn" onclick='newTab()'>Join Group <i class="fa fa-whatsapp"></i></button>
                 </center>
                 <br>
                 
